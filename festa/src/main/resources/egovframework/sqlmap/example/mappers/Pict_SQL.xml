@@ -113,4 +113,19 @@
 		where idx = #{idx}
 	</update>
 	
+	<select id="store_list" resultType="pictVO">
+		select * from store_table
+		order by order_by asc
+	</select>
+	
+	<select id="store_select" resultType="pictVO">
+		select s.*, group_concat(i.img_url)
+		from store_table s
+		left outer join store_img i on s.idx = i.store_id
+		where s.idx = #{idx}
+		group by i.store_id
+
+	</select>
+	
+	
 </mapper>

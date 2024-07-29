@@ -14,7 +14,9 @@ import java.security.MessageDigest;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.mail.PasswordAuthentication;
 import pict_admin.service.PictService;
@@ -26,9 +28,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.apache.commons.codec.binary.Base64;
@@ -50,21 +54,15 @@ public class pictController {
 	
 	@RequestMapping(value = "/lending.do")
 	public String lending(@ModelAttribute("searchVO") PictVO pictVO, HttpServletRequest request, ModelMap model, HttpSession session, RedirectAttributes rttr) throws Exception {
-		/*
+		
 		//공지사항
 		List<?> board_list = pictService.board_list(pictVO);
 		model.addAttribute("resultList", board_list);
 		model.addAttribute("size", board_list.size());
+
+		List<PictVO> store_list = pictService.store_list(pictVO);
+		model.addAttribute("store_list", store_list);
 		
-		//이벤트
-		List<?> event_list = pictService.event_list(pictVO);
-		model.addAttribute("resultList2", event_list);
-		model.addAttribute("size2", event_list.size());
-		
-		//팸투어
-		pictVO = pictService.pemtour_select(pictVO);
-		model.addAttribute("pictVO", pictVO);
-		*/
 		return "pict/main/main";
 	}
 	
@@ -526,6 +524,26 @@ public class pictController {
 		return "pict/main/message";
 		
 	}	
+	
+	
+	
+	
+	@RequestMapping("/get_troop_info")
+	@ResponseBody
+	public HashMap<String, Object> get_troop_info(@ModelAttribute("pictVO") PictVO pictVO, ModelMap model, HttpServletRequest request, @RequestBody Map<String, Object> param) throws Exception {	
+		String troopno = param.get("idx").toString();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+
+
+		pictVO = pictService.store_select(pictVO);
+		if(pictVO != null) {
+			map.put("rst", pictVO);
+			return map;
+		}
+		else {
+			return map;
+		}
+	}
 	
 	public static String encryptPassword(String password, String id) throws Exception {
 		if (password == null) return "";

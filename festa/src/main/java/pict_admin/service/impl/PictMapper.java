@@ -68,4 +68,8 @@ public interface PictMapper {
 	
 	void event_file_delete(PictVO pictVO) throws Exception;
 
+	List<PictVO> store_list(PictVO pictVO) throws Exception;
+
+	PictVO store_select(PictVO pictVO) throws Exception;
+
 }
