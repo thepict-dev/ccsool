@@ -158,5 +158,11 @@ public class PictServiceImpl extends EgovAbstractServiceImpl implements PictServ
 		return pictMapper.store_select(pictVO);
 	}
 
+	@Override
+	public List<PictVO> store_list_detail(PictVO pictVO) throws Exception {
+		// TODO Auto-generated method stub
+		return pictMapper.store_list_detail(pictVO);
+	}
+
 	
 }

@@ -63,6 +63,9 @@ public class pictController {
 		List<PictVO> store_list = pictService.store_list(pictVO);
 		model.addAttribute("store_list", store_list);
 		
+		List<PictVO> store_list_detail = pictService.store_list_detail(pictVO);
+		model.addAttribute("store_list_detail", store_list_detail);
+		
 		return "pict/main/main";
 	}
 	
@@ -528,13 +531,13 @@ public class pictController {
 	
 	
 	
-	@RequestMapping("/get_troop_info")
+	@RequestMapping("/get_store_info.do")
 	@ResponseBody
 	public HashMap<String, Object> get_troop_info(@ModelAttribute("pictVO") PictVO pictVO, ModelMap model, HttpServletRequest request, @RequestBody Map<String, Object> param) throws Exception {	
-		String troopno = param.get("idx").toString();
+		String idx = param.get("idx").toString();
 		HashMap<String, Object> map = new HashMap<String, Object>();
 
-
+		pictVO.setIdx(Integer.parseInt(idx));
 		pictVO = pictService.store_select(pictVO);
 		if(pictVO != null) {
 			map.put("rst", pictVO);

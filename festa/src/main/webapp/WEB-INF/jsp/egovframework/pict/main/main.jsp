@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="fn"	   uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -152,46 +153,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- 
-		<section class="main-events2">
-			<div class="main-events-box">
-				<div class="main-container">
-					<div class="event-title-container no-margin">
-						<p>2024 제4회 춘천술페스타에서 준비한 다양한 행사에 참여하세요</p>
-						<h2>이벤트</h2>
-					</div>
-					<div class="swiper2 main-events-slide2">
-						<div class="swiper-wrapper">
-							<c:forEach var="resultList" items="${resultList2}" varStatus="status">
-								<div class="swiper-slide">
-									<div class="main-events-item">
-										<a href="${resultList.link_url}" class="main-events-lnk" target="_blank">
-											<div class="img">
-												<img src="${resultList.img_url}" alt="" />
-											</div>
-											<h3 class="title">${resultList.title}</h3>
-											<div class="desc">${resultList.text}</div>
-											<c:if test="${resultList.from_date ne null && resultList.from_date ne undefined && resultList.from_date ne ''}">
-												<div class="date">${resultList.from_date} ~ ${resultList.to_date}</div>
-											</c:if>
-											<c:if test="${resultList.from_date eq null || resultList.from_date eq undefined || resultList.from_date eq ''}">
-												<div class="date">-</div>
-											</c:if>
-											
-										</a>
-									</div>
-								</div>
-			                </c:forEach>
-						</div>
-						<div class="swiper-pagination2"></div>
-						<div class="gauge-container2">
-							<div class="gauge2"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		 -->
+
 		<section class="map-grid-container">
 			<div class="map-title-container">
 				<p>춘천에 양조장이 ?!</p>
@@ -248,14 +210,66 @@
 							<div class="comments-tail"></div>
 						</div>
 					</div>
-					<%@ include file="./modal.jsp" %>
+					<div class="map-info-poz-container">
+						<button class="cancel-map">
+							<i class="fas fa-times"></i>
+						</button>
+						<div class="triangle"></div>
+						<c:forEach var="store_list_detail" items="${store_list_detail}" varStatus="status">
+							<div class="map-info-container" data-id="${store_list_detail.data_id}">
+								<div class="map-info-title">
+									<h4>${store_list_detail.title}</h4>
+									<div class="link-container">
+										<c:if test="${store_list_detail.shop_url ne '' && store_list_detail.shop_url ne null && store_list_detail.shop_url ne undefined}">
+											<a class="link-buy" target="_blank" href="${store_list_detail.shop_url}">구매하러 가기</a>
+										</c:if>
+										<c:if test="${store_list_detail.vr_link ne '' && store_list_detail.vr_link ne null && store_list_detail.vr_link ne undefined}">
+											<a class="vr-tour" target="_blank" referrerpolicy="no-referrer" href="${store_list_detail.vr_link}">360VR 투어</a>
+										</c:if>
+									</div>
+								</div>
+								<div class="detail-info">
+									<span class="adress">${store_list_detail.address}</span>
+									<span class="tel">${store_list_detail.tel}</span>
+									<c:if test="${store_list_detail.link_url ne '' && store_list_detail.link_url ne null && store_list_detail.link_url ne undefined}">
+										<a href="${store_list_detail.link_url}">${store_list_detail.link_url}</a>
+									</c:if>
+								</div>
+								<div class="detail-des">
+									<h5 class="sub-title">양조장 소개</h5>
+									<p>
+										${store_list_detail.introduce}
+									</p>
+								</div>
+								<div class="sale-list-container">
+									<h5 class="sub-title">판매상품</h5>
+									<div class="sale-grid-container">
+										<c:set var="img" value="${fn:split(store_list_detail.img_url_arr,',')}" />
+										<c:forEach var="imgValue" items="${img}" varStatus="varStatus">
+											<div class="slae-items-container">
+												<div class=slae-item-img>
+													
+													<img src="http://gwm20.com/${imgValue}" alt="상품이미지" style="margin-top :22px"/>
+												</div>
+												<c:set var="split_img" value="${fn:split(imgValue,'/')[3]}"/>
+												<span>${fn:split(split_img,".")[0]}</span>
+											</div>
+										</c:forEach>
+										
+									</div>
+								</div>
+							</div>
+						</c:forEach>
+					</div>
 				</div>
 				<ul class="map-list-container">
-					<li class="map-items-container" data-id="chunju">
-						<h5 class="item-title">춘추2401</h5>
-						<p class="item-address">강원 춘천시 신북읍 율문길 65-5</p>
-						<div class="arrow"></div>
-					</li>
+					<c:forEach var="store_list" items="${store_list}" varStatus="status">
+						<li class="map-items-container" data-id="${store_list.data_id}">
+							<h5 class="item-title">${store_list.title }</h5>
+							<p class="item-address">${store_list.address}</p>
+							<div class="arrow"></div>
+						</li>
+					</c:forEach>
 				</ul>
 			</div>
 			<div class="map-download-container">

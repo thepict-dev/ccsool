@@ -3,7 +3,7 @@
 <%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fn"	   uri="http://java.sun.com/jsp/jstl/functions"%>
-
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 <div class="map-info-poz-container">
 	<button class="cancel-map">
 		<i class="fas fa-times"></i>
@@ -13,7 +13,7 @@
 		<div class="map-info-title">
 			<h4>춘주2401</h4>
 			<div class="link-container">
-				<!-- <a class="link-buy">구매하러 가기</a> -->
+				<a class="link-buy">구매하러 가기</a>
 				<a class="vr-tour" target="_blank" referrerpolicy="no-referrer" href="https://pict.space/sulfesta/2401/">360VR 투어</a>
 			</div>
 		</div>
@@ -43,3 +43,27 @@
 		</div>
 	</div>
 </div>
+<script>
+
+	function store_info(idx){
+		var param = {
+				idx : idx
+		}
+		
+		$.ajax({
+			url : "/get_store_info.do"
+			, type : "POST"
+			, data : JSON.stringify(param)
+			, contentType : "application/json"
+			, success : function(data, status, xhr) {
+				var rst = data.rst;
+				debugger
+			},
+			error : function(err){ 
+				alert("에러가 발생했습니다.")
+			}
+		})
+		
+	}
+</script>
+

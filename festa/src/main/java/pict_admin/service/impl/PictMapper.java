@@ -72,4 +72,6 @@ public interface PictMapper {
 
 	PictVO store_select(PictVO pictVO) throws Exception;
 
+	List<PictVO> store_list_detail(PictVO pictVO) throws Exception;
+
 }

@@ -127,8 +127,64 @@ public class PictVO extends PictDefaultVO {
 	private String maintitle;
 	private String from_date;
 	private String to_date;
+	private String data_id;
+	private String address;
+	private String tel;
+	private String introduce;
+	private String shop_url;
+	private String vr_link;
+	private String img_url_arr;
+	private String img_title_arr;
 	
 	
+	public String getImg_title_arr() {
+		return img_title_arr;
+	}
+	public void setImg_title_arr(String img_title_arr) {
+		this.img_title_arr = img_title_arr;
+	}
+	public String getData_id() {
+		return data_id;
+	}
+	public void setData_id(String data_id) {
+		this.data_id = data_id;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getIntroduce() {
+		return introduce;
+	}
+	public void setIntroduce(String introduce) {
+		this.introduce = introduce;
+	}
+	public String getShop_url() {
+		return shop_url;
+	}
+	public void setShop_url(String shop_url) {
+		this.shop_url = shop_url;
+	}
+	public String getVr_link() {
+		return vr_link;
+	}
+	public void setVr_link(String vr_link) {
+		this.vr_link = vr_link;
+	}
+	public String getImg_url_arr() {
+		return img_url_arr;
+	}
+	public void setImg_url_arr(String img_url_arr) {
+		this.img_url_arr = img_url_arr;
+	}
 	public String getFrom_date() {
 		return from_date;
 	}

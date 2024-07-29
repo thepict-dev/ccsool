@@ -83,6 +83,7 @@ buttons.forEach(function(el){
 //		}
 		const tailPoz = Math.floor((el.getBoundingClientRect().top - container.getBoundingClientRect().top) + ((el.getBoundingClientRect().height - tail.getBoundingClientRect().height) / 2));
 		tail.style.top = tailPoz + 'px';
+		
 		let id = el.dataset.id;
 		resetContainer(id);
 		if (!document.querySelector(`.map-info-container[data-id='${id}']`).classList.contains('active')) {

@@ -118,12 +118,12 @@
 		order by order_by asc
 	</select>
 	
-	<select id="store_select" resultType="pictVO">
-		select s.*, group_concat(i.img_url)
+	<select id="store_list_detail" resultType="pictVO">
+		select s.*, group_concat(i.img_url) as img_url_arr
 		from store_table s
 		left outer join store_img i on s.idx = i.store_id
-		where s.idx = #{idx}
-		group by i.store_id
+		
+		group by s.idx
 
 	</select>
 	
