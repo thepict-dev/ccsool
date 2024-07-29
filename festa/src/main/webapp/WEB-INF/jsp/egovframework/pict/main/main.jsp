@@ -246,14 +246,18 @@
 									<div class="sale-grid-container">
 										<c:set var="img" value="${fn:split(store_list_detail.img_url_arr,',')}" />
 										<c:forEach var="imgValue" items="${img}" varStatus="varStatus">
-											<div class="slae-items-container">
-												<div class=slae-item-img>
-													
-													<img src="http://gwm20.com/${imgValue}" alt="상품이미지" style="margin-top :22px"/>
+											<c:if test="${imgValue eq null || imgValue eq '' || imgValue eq undefined}">
+												<span style="font-family: '210OmniGulim030-Regular'; letter-spacing: -1.12px; color: #2b2b2b; line-height: 1.81;">등록된 상품이 없습니다</p>
+											</c:if>
+											<c:if test="${imgValue ne null && imgValue ne '' && imgValue ne undefined}">
+												<div class="slae-items-container">
+													<div class=slae-item-img>
+														<img src="http://gwm20.com/${imgValue}" alt="상품이미지"/>
+													</div>
+													<c:set var="split_img" value="${fn:split(imgValue,'/')[3]}"/>
+													<span>${fn:split(split_img,".")[0]}</span>
 												</div>
-												<c:set var="split_img" value="${fn:split(imgValue,'/')[3]}"/>
-												<span>${fn:split(split_img,".")[0]}</span>
-											</div>
+											</c:if>
 										</c:forEach>
 										
 									</div>
