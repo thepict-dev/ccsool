@@ -23,4 +23,13 @@
 	<script src="../../../../../js/scripts.js"></script>
 	<script src="../../../../../js/Chart.min.js" crossorigin="anonymous"></script>
 	<script src="../../../../../js/simple-datatables@latest.js" crossorigin="anonymous"></script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVKLFQHYW0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-FVKLFQHYW0');
+	</script>
 </head>     
