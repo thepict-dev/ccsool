@@ -54,6 +54,10 @@
 	<main>
 		<section class="main-section">
 			<div class="main-back"></div>
+			<div class="main-titles">
+				<h1><img src="../../../../../img/main/logo.png" alt="타이틀로고" /></h1>
+				<h1><img src="../../../../../img/main/date.png" alt="행사장소 및 일자" /></h1>
+			</div>
 			<!--<div class="sns-container">
 				<button class="insta">
 					<a href="https://www.instagram.com/chuncheon_sool_festa/" target="_blank" class="">인스타그램 바로가기</a>
@@ -220,6 +224,54 @@
 					<div class="map-circle-container midury">
 						<div class="comments-container">
 							<div class="place-name">미더리봉자</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container grape">
+						<div class="comments-container">
+							<div class="place-name">만나포도원</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container uibyeong">
+						<div class="comments-container">
+							<div class="place-name">의병주제조보존회</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container bomne1">
+						<div class="comments-container">
+							<div class="place-name">봄내양조장</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container distealer">
+						<div class="comments-container">
+							<div class="place-name">디스틸러<br>앤브루어</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container bomne2">
+						<div class="comments-container">
+							<div class="place-name">봄내발효기술</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container soyang">
+						<div class="comments-container">
+							<div class="place-name">소양주조</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container slow">
+						<div class="comments-container">
+							<div class="place-name">느린마을양조장</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container jipeyong">
+						<div class="comments-container">
+							<div class="place-name">지평주조</div>
 							<div class="comments-tail"></div>
 						</div>
 					</div>

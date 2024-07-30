@@ -114,24 +114,6 @@ header nav ul li:not(:last-of-type) {
 }
 
 
-.root .right-people {
-    width: 431px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    transform: translateY(70%);
-}
-
-.root .right-people img {
-	
-}
-
-.root .sns-container {
-	display: flex;
-}
 .root .sns-container > button {
 	position: relative;
 	z-index: 1;
@@ -175,6 +157,24 @@ header nav ul li:not(:last-of-type) {
     z-index: -1;
     background-position: center;
 	background-origin: center;
+}
+.main-titles{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 70px;
+}
+.main-titles h1{
+	 max-width: 572px;
+}
+.main-titles h1 img{
+	width: 100%;
+}
+.date{
+	 max-width: 524px;
+}
+.date img{
+	width: 100%;
 }
 
 .insta {
@@ -1149,17 +1149,17 @@ header nav ul li:not(:last-of-type) {
 
 
 .root .map-circle-container.hosu {
-    top: 43%;
-    left: 48%;
+    top: 55%;
+    left: 64%;
 }
 .root .map-circle-container.squeeze {
-    top: 48%;
-    left: 52%;
+    top: 47%;
+    left: 55%;
 }
 
 .root .map-circle-container.chuncheon {
-	top: 56%;
-    left: 59%;
+	top: 55%;
+    left: 58%;
 }
 
 .root .map-circle-container.jisiul {
@@ -1173,8 +1173,53 @@ header nav ul li:not(:last-of-type) {
 }
 
 .root .map-circle-container.midury {
+	top: 40%;
+    left: 50%;
+}
+
+.root .map-circle-container.grape {
+	top: 34.5%;
+    left: 48%;
+}
+
+.root .map-circle-container.uibyeong {
+	top: 77%;
+    right: 85.5%;
+}
+
+.root .map-circle-container.jipeyong {
 	top: 37%;
     left: 49%;
+}
+
+.root .map-circle-container.bomne1 {
+	top: 52.5%;
+    left: 52%;
+}
+
+.root .map-circle-container.distealer {
+	top: 66.5%;
+    left: 55%;
+}
+
+.root .map-circle-container.bomne2 {
+	top: 47%;
+    left: 47%;
+}
+
+.root .map-circle-container.soyang {
+	top: 41%;
+    left: 55%;
+}
+
+.root .map-circle-container.slow {
+    top: 44%;
+    left: 52%;
+}
+
+.root .map-circle-container.jipeyong {
+    top: 71%;
+    left: 51%;
 }
 
 .root .comments-container {
@@ -1839,7 +1884,18 @@ header nav ul li:not(:last-of-type) {
 	    display: none;
 	}
 	.root .main-section .main-back {
-		background-image: url("../../../img/main/main-back-mobile.webp");
+		background-image: url("../../../img/main/main-back-mobile.png");
+	}
+	.main-titles{
+	    height: 100%;	
+		row-gap: 20px;
+		padding-top: 49%;
+	}
+	.main-titles h1{
+		 max-width: 214px;
+	}
+	.date{
+		 max-width: 196px;
 	}
 	.root .sns-container {
 		flex-direction: column;

@@ -169,11 +169,8 @@ window.addEventListener("scroll", (event) => {
 
 window.addEventListener('resize', ()=> {
 	eventGague = swiper.snapGrid.length;
-	eventGague2 = swiper2.snapGrid.length;
 	const width = 100 / eventGague;
-	const width2 = 100 / eventGague2;
 	document.querySelector(".gauge").style.width = width + "%";
-	document.querySelector(".gauge2").style.width = width2 + "%";
 })
 
 
