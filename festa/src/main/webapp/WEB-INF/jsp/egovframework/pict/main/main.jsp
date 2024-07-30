@@ -17,7 +17,7 @@
 	<link href="../../../../../css/egovframework/pict/reset.css" rel="stylesheet">
 	<link href="../../../../../css/egovframework/pict/main.css" rel="stylesheet">
 	<link href="../../../../../css/egovframework/pict/swiper-bundle.min.css" rel="stylesheet" />
-	<script src="https://kit.fontawesome.com/47676f562a.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="/img/pabi.png">
 	
 	<meta property="og:title" content="2024 춘천 술페스타">
 	<meta property="og:description" content="2024 춘천 술페스타">
