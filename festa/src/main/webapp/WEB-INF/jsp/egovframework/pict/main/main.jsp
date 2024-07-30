@@ -19,11 +19,11 @@
 	<link href="../../../../../css/egovframework/pict/swiper-bundle.min.css" rel="stylesheet" />
 	<script src="https://kit.fontawesome.com/47676f562a.js" crossorigin="anonymous"></script>
 	
-	<meta property="og:title" content="춘천 술페스타">
-	<meta property="og:description" content="춘천 술페스타">
+	<meta property="og:title" content="2024 춘천 술페스타">
+	<meta property="og:description" content="2024 춘천 술페스타">
 	<meta property="og:image" content="/img/main/poster.png">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="춘천 술페스타">
+	<meta property="og:site_name" content="2024 춘천 술페스타">
 	
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVKLFQHYW0"></script>
