@@ -12,14 +12,27 @@
 <%--     </c:import> --%>
 <head>
 <title>2024 춘천 술페스타</title>
-	<meta name="Keywords" content="술페스타, 춘천술페스타, 춘천, 춘천여행" />
+	<meta name="keywords" content="술페스타, 춘천술페스타, 춘천, 춘천여행" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<%-- <link href="../../../../../css/egovframework/pict/styles.css"
-			rel="stylesheet" /> --%>
 	<link href="../../../../../css/egovframework/pict/reset.css" rel="stylesheet">
 	<link href="../../../../../css/egovframework/pict/main.css" rel="stylesheet">
 	<link href="../../../../../css/egovframework/pict/swiper-bundle.min.css" rel="stylesheet" />
 	<script src="https://kit.fontawesome.com/47676f562a.js" crossorigin="anonymous"></script>
+	
+	<meta property="og:title" content="춘천 술페스타">
+	<meta property="og:description" content="춘천 술페스타">
+	<meta property="og:image" content="/img/main/poster.png">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="춘천 술페스타">
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVKLFQHYW0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-FVKLFQHYW0');
+	</script>
 </head>
 <body class="sb-nav-fixed root">
 	<header>
