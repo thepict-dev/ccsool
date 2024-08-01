@@ -709,6 +709,7 @@ header nav ul li:not(:last-of-type) {
 	color:#7a7a7a;
 	margin-top:30px;
 	font-size: 13px;
+	font-family: 'Noto Sans KR', sans-serif; 
 }
 .root .main-events-lnk .dday {
 	position: absolute;
@@ -1223,6 +1224,11 @@ header nav ul li:not(:last-of-type) {
 .root .map-circle-container.jipeyong {
     top: 71%;
     left: 51%;
+}
+
+.root .map-circle-container.yeolo {
+	top: 66%;
+    left: 34%;
 }
 
 .root .comments-container {

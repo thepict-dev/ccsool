@@ -275,6 +275,12 @@
 							<div class="comments-tail"></div>
 						</div>
 					</div>
+					<div class="map-circle-container yeolo">
+						<div class="comments-container">
+							<div class="place-name">여로</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
 					<div class="map-info-poz-container">
 						<button class="cancel-map">
 							<i class="fas fa-times"></i>
