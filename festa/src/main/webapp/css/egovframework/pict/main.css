@@ -1314,7 +1314,7 @@ header nav ul li:not(:last-of-type) {
 
 .map-info-poz-container {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     width: 100%;
     height: 100%;
     top: 0;
