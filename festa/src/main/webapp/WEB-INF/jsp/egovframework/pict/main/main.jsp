@@ -76,7 +76,7 @@
 		</section> -->
 		<section class="video-container">
 			<div class="video-wrapper">
-				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/992521359?h=05024da56e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="v0.9_SPOT영상_2024 한강 라이징 스타_(주)더픽트_20240331"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/992521359?h=05024da56e&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="v0.4_타이포 홍보영상_2024 춘천 술페스타_(주)더픽트_20240808"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 			</div>
 		</section>
 		<section class="event-info-container">
@@ -191,69 +191,15 @@
 							<div class="comments-tail"></div>
 						</div>
 					</div>
-					<div class="map-circle-container hosu">
-						<div class="comments-container">
-							<div class="place-name">주모협동조합(호수양조장)</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container squeeze">
-						<div class="comments-container">
-							<div class="place-name">스퀴즈브루어리</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container chuncheon">
-						<div class="comments-container">
-							<div class="place-name">춘천양조장</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container jisiul">
-						<div class="comments-container">
-							<div class="place-name">지시울</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container yesul">
-						<div class="comments-container">
-							<div class="place-name">예술</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container midury">
-						<div class="comments-container">
-							<div class="place-name">미더리봉자</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
 					<div class="map-circle-container grape">
 						<div class="comments-container">
 							<div class="place-name">만나포도원</div>
 							<div class="comments-tail"></div>
 						</div>
 					</div>
-					<div class="map-circle-container uibyeong">
+					<div class="map-circle-container midury">
 						<div class="comments-container">
-							<div class="place-name">의병주제조보존회</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container bomne1">
-						<div class="comments-container">
-							<div class="place-name">봄내양조장</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container distealer">
-						<div class="comments-container">
-							<div class="place-name">디스틸러<br>앤브루어</div>
-							<div class="comments-tail"></div>
-						</div>
-					</div>
-					<div class="map-circle-container bomne2">
-						<div class="comments-container">
-							<div class="place-name">봄내발효기술</div>
+							<div class="place-name">미더리봉자</div>
 							<div class="comments-tail"></div>
 						</div>
 					</div>
@@ -269,15 +215,69 @@
 							<div class="comments-tail"></div>
 						</div>
 					</div>
+					<div class="map-circle-container bomne2">
+						<div class="comments-container">
+							<div class="place-name">봄내발효기술</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container squeeze">
+						<div class="comments-container">
+							<div class="place-name">스퀴즈브루어리</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container bomne1">
+						<div class="comments-container">
+							<div class="place-name">봄내양조장</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container hosu">
+						<div class="comments-container">
+							<div class="place-name">주모협동조합(호수양조장)</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container chuncheon">
+						<div class="comments-container">
+							<div class="place-name">춘천양조장</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container distealer">
+						<div class="comments-container">
+							<div class="place-name">디스틸러<br>앤브루어</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
 					<div class="map-circle-container jipeyong">
 						<div class="comments-container">
 							<div class="place-name">지평주조</div>
 							<div class="comments-tail"></div>
 						</div>
 					</div>
+					<div class="map-circle-container jisiul">
+						<div class="comments-container">
+							<div class="place-name">지시울</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container yesul">
+						<div class="comments-container">
+							<div class="place-name">예술</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
 					<div class="map-circle-container yeolo">
 						<div class="comments-container">
 							<div class="place-name">여로</div>
+							<div class="comments-tail"></div>
+						</div>
+					</div>
+					<div class="map-circle-container uibyeong">
+						<div class="comments-container">
+							<div class="place-name">의병주제조보존회</div>
 							<div class="comments-tail"></div>
 						</div>
 					</div>

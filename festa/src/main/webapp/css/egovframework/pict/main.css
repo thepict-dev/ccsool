@@ -1121,7 +1121,7 @@ header nav ul li:not(:last-of-type) {
 
 .root .map-circle-container {
 	position : absolute;
-	z-index : 1;
+	z-index : 2;
 	width : 18px;
 	height: 18px;
 	background-color: #30183D;
@@ -1151,6 +1151,10 @@ header nav ul li:not(:last-of-type) {
 	left : 55%;
 }
 
+.root .map-circle-container.grape {
+	top: 34.5%;
+    left: 48%;
+}
 
 .root .map-circle-container.hosu {
     top: 55%;
@@ -1173,19 +1177,18 @@ header nav ul li:not(:last-of-type) {
 
 .root .map-circle-container.yesul {
 	top: 66%;
+    left: 34%;
+}
+
+.root .map-circle-container.yeolo {
+	top: 66%;
     left: 31%;
 }
 
 .root .map-circle-container.midury {
-	top: 40%;
-    left: 50%;
+    top: 42%;
+    left: 47%;
 }
-
-.root .map-circle-container.grape {
-	top: 34.5%;
-    left: 48%;
-}
-
 .root .map-circle-container.uibyeong {
 	top: 77%;
     right: 85.5%;
@@ -1226,27 +1229,26 @@ header nav ul li:not(:last-of-type) {
     left: 51%;
 }
 
-.root .map-circle-container.yeolo {
-	top: 66%;
-    left: 34%;
-}
 
 .root .comments-container {
 	width: max-content;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	position : absolute;
 	top : 0;
 	left : 50%;
 	transform : translate(-50%, -120%);
-	opacity: 0;
 	transition : all 0.25;
 }
 .root .comments-container.active {
-	opacity: 1;
+	display: flex;
 }
 
+.root .map-circle-container:hover .comments-container{
+	
+	display: flex;
+}
 
 .root .map-items-container .arrow {
 	position : absolute;
@@ -1517,6 +1519,9 @@ header nav ul li:not(:last-of-type) {
 }
 
 @media (max-width: 1024px) {
+	.root .main-section .main-back {
+		background-image: url("../../../img/main/main-back-mobile.png");
+	}
 	.root .gauge-container {
 		width: calc(100% - 125px);	
 	}
