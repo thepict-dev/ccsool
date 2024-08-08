@@ -72,6 +72,11 @@ const tail = document.querySelector('.triangle');
 const breweryDetailList = document.querySelectorAll('.map-info-container');
 const resetContainer = (id) => {
 	breweryDetailList.forEach(el => el.dataset.id === id ? null : el.classList.remove('active'))
+            
+		// Set z-index of map-poz-container to 3
+		if (mapContainer) {
+		    mapContainer.style.zIndex = '3';
+		}
 }
 buttons.forEach(function(el){
 	el.addEventListener('click', function(e){
@@ -89,9 +94,11 @@ buttons.forEach(function(el){
 		if (!document.querySelector(`.map-info-container[data-id='${id}']`).classList.contains('active')) {
 			document.querySelector(`.map-info-container[data-id='${id}']`).classList.add('active');	
 			tail.classList.add('active');
+            document.querySelector(`.map-info-poz-container`).mapContainer.style.zIndex = '3';
 		} else {
 			document.querySelector(`.map-info-container[data-id='${id}']`).classList.remove('active');
 			tail.classList.remove('active');
+            document.querySelector(`.map-info-poz-container`).mapContainer.style.zIndex = '1';
 		}
 		
 	})
