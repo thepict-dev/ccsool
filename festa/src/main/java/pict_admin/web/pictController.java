@@ -69,6 +69,13 @@ public class pictController {
 		return "pict/main/main";
 	}
 	
+	//공지사항 뷰
+	@RequestMapping(value = "/notice_view.do")
+	public String notice_view(@ModelAttribute("searchVO") PictVO pictVO, HttpServletRequest request, ModelMap model, HttpSession session, RedirectAttributes rttr) throws Exception {
+		
+		return "pict/main/notice_view";
+	}
+	
 	@RequestMapping(value = "/pict_login.do")
 	public String login_main(@ModelAttribute("searchVO") AdminVO adminVO, HttpServletRequest request, ModelMap model, HttpServletResponse response) throws Exception {
 		String userAgent = request.getHeader("user-agent");
