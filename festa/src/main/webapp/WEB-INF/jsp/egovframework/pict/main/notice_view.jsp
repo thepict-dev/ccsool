@@ -43,11 +43,11 @@
 				<span class="line"></span>
 			</button>
 			<ul>
-				<li data-id="home"><a href="https://www.ccsool.co.kr/#home">홈</a></li>
-				<li data-id="info"><a href="https://www.ccsool.co.kr/#info">행사개요</a></li>
-				<li data-id="vr"><a href="https://www.ccsool.co.kr/#vr">360VR투어</a></li>
-				<li data-id="notice"><a href="https://www.ccsool.co.kr/#notice">공지사항</a></li>
-				<li data-id="map"><a href="https://www.ccsool.co.kr/#map">춘천술지도</a></li>
+				<li data-id="home"><a href="/lending.do">홈</a></li>
+				<li data-id="info"><a href="/lending.do">행사개요</a></li>
+				<li data-id="vr"><a href="/lending.do">360VR투어</a></li>
+				<li data-id="notice"><a href="/lending.do">공지사항</a></li>
+				<li data-id="map"><a href="/lending.do">춘천술지도</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -124,61 +124,6 @@
 			document.querySelector('header nav ul').classList.toggle('active');
 	
 		})
-		
-		const navHandler = (section) => {
-			let top;
-			switch (section) {
-				case "home":
-					window.scrollTo({top: 0, behavior: "smooth"});
-					break;
-				case "info":
-					top = document.querySelector('.event-info-container').offsetTop - 140;
-					window.scrollTo({top, behavior: "smooth"});
-					break;
-				case "vr":
-					top = document.querySelector('.vr-tour-container').offsetTop - 140;
-					window.scrollTo({top, behavior: "smooth"});
-					break;
-				case "notice":
-					top = document.querySelector('.main-events').offsetTop - 140;
-					window.scrollTo({top, behavior: "smooth"});
-					break;
-				case "map":
-					top = document.querySelector('.map-grid-container').offsetTop - 140;
-					window.scrollTo({top, behavior: "smooth"});
-					break;
-				case "event":
-					top = document.querySelector('.main-events2').offsetTop - 140;
-					window.scrollTo({top, behavior: "smooth"});
-					break;
-				default:
-					break;
-			}
-		}
-        // URL 파라미터에서 섹션 정보 가져오기
-        const getUrlParameter = (name) => {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            const results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        };
-
-        // 네비게이션 메뉴 클릭 이벤트 리스너 추가
-        document.querySelectorAll('nav ul li').forEach(item => {
-            item.addEventListener('click', function() {
-                navHandler(this.getAttribute('data-id'));
-            });
-        });
-
-        // 페이지 로드 완료 후 실행
-        window.addEventListener('load', function() {
-		    const section = window.location.hash.slice(1); // '#'을 제거하고 섹션 이름만 가져옵니다.
-		    if (section) {
-		        setTimeout(() => {
-		            navHandler(section);
-		        }, 100); // 페이지 로드 후 약간의 지연을 두고 스크롤 실행
-		    }
-		});
 	</script>
 </body>
 </html>
