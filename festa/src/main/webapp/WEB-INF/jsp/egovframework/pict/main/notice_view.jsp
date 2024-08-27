@@ -124,6 +124,31 @@
 			document.querySelector('header nav ul').classList.toggle('active');
 	
 		})
+		
+        // URL 파라미터에서 섹션 정보 가져오기
+        const getUrlParameter = (name) => {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        // 네비게이션 메뉴 클릭 이벤트 리스너 추가
+        document.querySelectorAll('nav ul li').forEach(item => {
+            item.addEventListener('click', function() {
+                navHandler(this.getAttribute('data-id'));
+            });
+        });
+
+        // 페이지 로드 완료 후 실행
+        window.addEventListener('load', function() {
+		    const section = window.location.hash.slice(1); // '#'을 제거하고 섹션 이름만 가져옵니다.
+		    if (section) {
+		        setTimeout(() => {
+		            navHandler(section);
+		        }, 100); // 페이지 로드 후 약간의 지연을 두고 스크롤 실행
+		    }
+		});
 	</script>
 </body>
 </html>
