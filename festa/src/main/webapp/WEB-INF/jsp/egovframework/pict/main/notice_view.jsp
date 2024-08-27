@@ -43,11 +43,11 @@
 				<span class="line"></span>
 			</button>
 			<ul>
-				<li data-id="home"><a href="https://www.ccsool.co.kr/?section=home">홈</a></li>
-				<li data-id="info"><a href="https://www.ccsool.co.kr/?section=info">행사개요</a></li>
-				<li data-id="vr"><a href="https://www.ccsool.co.kr/?section=vr">360VR투어</a></li>
-				<li data-id="notice"><a href="https://www.ccsool.co.kr/?section=notice">공지사항</a></li>
-				<li data-id="map"><a href="https://www.ccsool.co.kr/?section=map">춘천술지도</a></li>
+				<li data-id="home"><a href="https://www.ccsool.co.kr/#home">홈</a></li>
+				<li data-id="info"><a href="https://www.ccsool.co.kr/#info">행사개요</a></li>
+				<li data-id="vr"><a href="https://www.ccsool.co.kr/#vr">360VR투어</a></li>
+				<li data-id="notice"><a href="https://www.ccsool.co.kr/#notice">공지사항</a></li>
+				<li data-id="map"><a href="https://www.ccsool.co.kr/#map">춘천술지도</a></li>
 			</ul>
 		</nav>
 	</header>
