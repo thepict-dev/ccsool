@@ -36,6 +36,12 @@ header {
 	position : fixed;
 	z-index : 99;
 }
+header.notice {
+	width : 100%;
+	height : 118px;
+	position : unset;
+	z-index : 99;
+}
 
 header nav {
 	width: 100%;
@@ -331,8 +337,8 @@ header nav ul li:not(:last-of-type) {
 	margin-top : 64px;
 	margin-bottom : 8px;
 }
-
 .root .event-title-container h2 {
+
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 700;
 	color : #fff;
@@ -1948,7 +1954,7 @@ header nav ul li:not(:last-of-type) {
 	width: 100%;
 	max-width: 1206px;
 	padding: 0 20px;
-	margin: 158px auto 0;
+	margin: 50px auto 0;
 }
 .noticeTop{
 	display: flex;
@@ -1965,6 +1971,7 @@ header nav ul li:not(:last-of-type) {
 	font-weight: 500;
 	line-height: 130%; /* 41.6px */
 	letter-spacing: -1.6px;
+	font-family: 'Noto Sans KR', sans-serif;
 	
 }
 .noticeTop span{
@@ -1974,6 +1981,7 @@ header nav ul li:not(:last-of-type) {
 	font-weight: 500;
 	line-height: 130%; /* 20.8px */
 	letter-spacing: -0.8px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .noticeBottom{
 	width: 100%;
@@ -1987,11 +1995,13 @@ header nav ul li:not(:last-of-type) {
 	font-weight: 500;
 	line-height: 130%; /* 23.4px */
 	letter-spacing: -0.9px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .noticeBottom img{
+	display: block;
 	max-width: 500px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 40px;
 	text-align: center;
 }
 .buttonContainer{
@@ -2012,11 +2022,13 @@ header nav ul li:not(:last-of-type) {
 	font-weight: 500;
 	line-height: 170%; /* 23.8px */
 	letter-spacing: -0.7px;
+	border: 1px solid #8B96A2;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 @media all and (max-width : 1024px){
 	.noticeWrap{
-		margin: 100px auto 0;
+		margin: 20px auto 0;
 	}
 	.noticeTop{
 		display: flex;

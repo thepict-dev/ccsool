@@ -43,21 +43,23 @@
 				<span class="line"></span>
 			</button>
 			<ul>
-				<li data-id="home">홈</li>
-				<li data-id="info">행사개요</li>
-				<li data-id="vr">360VR투어</li>
-				<li data-id="notice">공지사항</li>
-				<li data-id="map">춘천술지도</li>
+				<li data-id="home"><a href="/lending.do">홈</a></li>
+				<li data-id="info"><a href="/lending.do">행사개요</a></li>
+				<li data-id="vr"><a href="/lending.do">360VR투어</a></li>
+				<li data-id="notice"><a href="/lending.do">공지사항</a></li>
+				<li data-id="map"><a href="/lending.do">춘천술지도</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div class="noticeWrap">
 		<div class="noticeTop">
-			<p>제목!</p>
-			<span>2024-01-01</span>
+			<p>${pictVO.title }</p>
+			<span>${fn:substring(pictVO.reg_date,0,11) }</span>
+			
 		</div>
 		<div class="noticeBottom">
-			<p>내용!</p>
+			<img src="https://www.ccsool.co.kr${pictVO.img_url}">
+			<p>${pictVO.text}</p>
 		</div>
 		<div class="buttonContainer">
 			<a href="/">뒤로가기</a>
@@ -101,6 +103,27 @@
 	</footer>
 
 	<script src="../../../../../js/all.min.js" crossorigin="anonymous"></script>
-	<script src="../../../../../js/festa.js" crossorigin="anonymous"></script>
+	<script>
+
+		document.querySelectorAll('header nav ul li').forEach(el=> el.addEventListener('click', ()=> {
+			// mobile
+			if (window.innerWidth <= 1024) {
+				document.querySelector('.mobile-menu').classList.remove('active');
+				document.querySelector('header nav ul').classList.contains('active') ? document.querySelector('header nav ul').classList.remove('active') : null;
+			}
+			const id = el.dataset.id;
+			navHandler(id);
+		}))
+	
+		document.querySelector('.mobile-menu').addEventListener('click', (e) => {
+			if (!document.querySelector('header nav ul').classList.contains('active')) {
+				e.currentTarget.classList.add('active');
+			} else {
+				e.currentTarget.classList.remove('active');
+			}
+			document.querySelector('header nav ul').classList.toggle('active');
+	
+		})
+	</script>
 </body>
 </html>
