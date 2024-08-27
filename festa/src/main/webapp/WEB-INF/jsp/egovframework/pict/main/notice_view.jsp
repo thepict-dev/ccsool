@@ -125,6 +125,36 @@
 	
 		})
 		
+		const navHandler = (section) => {
+			let top;
+			switch (section) {
+				case "home":
+					window.scrollTo({top: 0, behavior: "smooth"});
+					break;
+				case "info":
+					top = document.querySelector('.event-info-container').offsetTop - 140;
+					window.scrollTo({top, behavior: "smooth"});
+					break;
+				case "vr":
+					top = document.querySelector('.vr-tour-container').offsetTop - 140;
+					window.scrollTo({top, behavior: "smooth"});
+					break;
+				case "notice":
+					top = document.querySelector('.main-events').offsetTop - 140;
+					window.scrollTo({top, behavior: "smooth"});
+					break;
+				case "map":
+					top = document.querySelector('.map-grid-container').offsetTop - 140;
+					window.scrollTo({top, behavior: "smooth"});
+					break;
+				case "event":
+					top = document.querySelector('.main-events2').offsetTop - 140;
+					window.scrollTo({top, behavior: "smooth"});
+					break;
+				default:
+					break;
+			}
+		}
         // URL 파라미터에서 섹션 정보 가져오기
         const getUrlParameter = (name) => {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
