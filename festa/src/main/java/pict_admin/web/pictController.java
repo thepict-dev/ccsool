@@ -506,7 +506,13 @@ public class pictController {
 		return "pict/main/message";
 		
 	}
-	
+
+	//데시벨체크
+	@RequestMapping(value = "/decibel.do")
+	public String decibel(@ModelAttribute("searchVO") PictVO pictVO, ModelMap model, HttpServletRequest request) throws Exception {
+
+		return "pict/main/decibel";
+	}
 	
 	//팸투어
 	@RequestMapping(value = "/pemtour/pemtour_register.do")

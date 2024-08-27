@@ -110,7 +110,7 @@
 
 	<div class="login-wrapper">
 	    <div class="login-wrap">
-        	<h1 class="login-title"><img src="/images/pict/festa_intro.png" alt="강원대학교"></h1>
+        	<h1 class="login-title"><img src="/img/main/poster.png" alt="술페스타"></h1>
 	        <div class="login-box">
 		        <form action="#" id="entryForm" name="entryForm" method="post">
 	                <div class="login-inner">

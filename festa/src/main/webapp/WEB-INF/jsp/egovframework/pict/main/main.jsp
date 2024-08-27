@@ -145,7 +145,8 @@
 							<c:forEach var="resultList" items="${resultList}" varStatus="status">
 								<div class="swiper-slide">
 									<div class="main-events-item">
-										<a href="${resultList.link_url}" class="main-events-lnk" target="_blank">
+										<!-- <a href="${resultList.link_url}" class="main-events-lnk" target="_blank"> -->
+										<a href="/notice_view.do?idx=${resultList.idx}" class="main-events-lnk">
 											<div class="img">
 												<img src="${resultList.img_url}" alt="" />
 											</div>
@@ -372,8 +373,7 @@
 				<span class="name-tag">주소 :</span> 강원도 춘천시 시청길 40-1 픽트스퀘어
 			</address>
 			<p>
-				<span class="name-tag">전화 :</span> 1644-4845
-			</p>
+				<span class="name-tag">전화 :</span> 033-244-7758</p>
 		</div>
 		<div class="footer-row-container">
 			<p>
