@@ -156,13 +156,13 @@ const navHandler = (section) => {
 
         // 페이지 로드 완료 후 실행
         window.addEventListener('load', function() {
-            const section = getUrlParameter('section');
-            if (section) {
-                setTimeout(() => {
-                    navHandler(section);
-                }, 100); // 페이지 로드 후 약간의 지연을 두고 스크롤 실행
-            }
-        });
+    const section = window.location.hash.slice(1); // '#'을 제거하고 섹션 이름만 가져옵니다.
+    if (section) {
+        setTimeout(() => {
+            navHandler(section);
+        }, 100); // 페이지 로드 후 약간의 지연을 두고 스크롤 실행
+    }
+});
 
 document.querySelectorAll('header nav ul li').forEach(el=> el.addEventListener('click', ()=> {
 	// mobile
