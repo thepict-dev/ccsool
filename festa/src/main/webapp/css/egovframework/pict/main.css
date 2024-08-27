@@ -105,7 +105,13 @@ header nav ul li {
 	cursor: pointer;
 	font-size: 18px;
 }
-
+header.notice nav ul li {
+	letter-spacing: -1.08px;
+	color: #30183D;
+	font-family: "210OmniGulim030-Regular";
+	cursor: pointer;
+	font-size: 18px;
+}
 header nav ul.active li {
 	color: #30183D;
 }
@@ -1935,5 +1941,106 @@ header nav ul li:not(:last-of-type) {
 	.root .map-info-title .link-buy {
 		margin-right: 0;
 		
+	}
+}
+
+.noticeWrap{
+	width: 100%;
+	max-width: 1206px;
+	padding: 0 20px;
+	margin: 158px auto 0;
+}
+.noticeTop{
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	width: 100%;
+	padding: 16px 0;
+	border-bottom: 1px solid var(--bk, #000);
+}
+.noticeTop p{
+	color: #000;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%; /* 41.6px */
+	letter-spacing: -1.6px;
+	
+}
+.noticeTop span{
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%; /* 20.8px */
+	letter-spacing: -0.8px;
+}
+.noticeBottom{
+	width: 100%;
+	padding: 40px 0;
+	border-bottom: 1px solid #8B96A2;
+}
+.noticeBottom p{
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%; /* 23.4px */
+	letter-spacing: -0.9px;
+}
+.noticeBottom img{
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.buttonContainer{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 40px 0 150px 0;
+}
+.buttonContainer a{
+	display: flex;
+	width: 363px;
+	height: 56px;
+	justify-content: center;
+	align-items: center;
+	color: var(--bk, #000);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 170%; /* 23.8px */
+	letter-spacing: -0.7px;
+}
+
+@media all and (max-width : 1024px){
+	.noticeWrap{
+		margin: 100px auto 0;
+	}
+	.noticeTop{
+		display: flex;
+		flex-direction: column;
+		row-gap: 25px;
+		width: 100%;
+		padding: 16px 0;
+		border-bottom: 1px solid var(--bk, #000);
+	}
+	.noticeTop p{
+		color: #000;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 130%; /* 41.6px */
+		letter-spacing: -1px;
+		
+	}
+	.noticeTop span{
+		color: #000;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 130%; /* 20.8px */
+		letter-spacing: -0.8px;
 	}
 }

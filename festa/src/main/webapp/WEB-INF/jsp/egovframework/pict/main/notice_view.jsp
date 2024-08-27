@@ -35,6 +35,34 @@
 	</script>
 </head>
 <body class="sb-nav-fixed root">
+	<header class="notice">
+		<nav>
+			<button class="mobile-menu">
+				<span class="line"></span>
+				<span class="line short"></span>
+				<span class="line"></span>
+			</button>
+			<ul>
+				<li data-id="home">홈</li>
+				<li data-id="info">행사개요</li>
+				<li data-id="vr">360VR투어</li>
+				<li data-id="notice">공지사항</li>
+				<li data-id="map">춘천술지도</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="noticeWrap">
+		<div class="noticeTop">
+			<p>제목!</p>
+			<span>2024-01-01</span>
+		</div>
+		<div class="noticeBottom">
+			<p>내용!</p>
+		</div>
+		<div class="buttonContainer">
+			<a href="/">뒤로가기</a>
+		</div>
+	</div>
 	<footer class="footer">
 		<div class="footer-row-container">
 			<span>ⓒ (주)더픽트</span>
@@ -52,7 +80,7 @@
 				<span class="name-tag">주소 :</span> 강원도 춘천시 시청길 40-1 픽트스퀘어
 			</address>
 			<p>
-				<span class="name-tag">전화 :</span> 1644-4845
+				<span class="name-tag">전화 :</span> 033-244-7758
 			</p>
 		</div>
 		<div class="footer-row-container">
