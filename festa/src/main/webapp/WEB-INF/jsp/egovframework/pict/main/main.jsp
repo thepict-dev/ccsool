@@ -151,7 +151,6 @@
 												<img src="${resultList.img_url}" alt="" />
 											</div>
 											<h3 class="title">${resultList.title}</h3>
-											<div class="desc">${resultList.text}</div>
 											<c:if test="${resultList.from_date ne null && resultList.from_date ne undefined && resultList.from_date ne ''}">
 												<div class="date">${resultList.from_date} ~ ${resultList.to_date}</div>
 											</c:if>
