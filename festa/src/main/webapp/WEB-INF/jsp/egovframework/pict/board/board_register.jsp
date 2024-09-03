@@ -35,8 +35,16 @@
 									<div class="write-item">
 										<label for="title" class="title">내용*</label>
 										<div class="input-box">
-											<textarea name="text" id="text" cols="30" rows="5" class="txt" style="width:50%;" maxlength="85">${pictVO.text}</textarea>
-											<span id="text_cnt2">0</span>/ 85
+											<textarea name="text" id="text" cols="50" rows="40" class="txt" style="width:100%; height:400px">${pictVO.text}</textarea>
+											<script type="text/javascript">
+												var oEditors = [];
+												nhn.husky.EZCreator.createInIFrame({
+													oAppRef: oEditors,
+													elPlaceHolder: "text", //textarea에서 지정한 id와 일치해야 합니다.
+													sSkinURI: "/js/SmartEditor2Skin.html",
+													fCreator: "createSEditor2"
+												});
+											</script>
 										</div>
 									</div>
 									
@@ -126,7 +134,7 @@
 				return false;
 			}
 			
-			//oEditors[0].exec("UPDATE_CONTENTS_FIELD", []);
+			oEditors[0].exec("UPDATE_CONTENTS_FIELD", []);
 			
 			var text = "등록하시겠습니까?";
 			if (saveType == 'update') {

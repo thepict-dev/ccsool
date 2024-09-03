@@ -35,16 +35,14 @@
 							        <table>
 							        	<colgroup>
 							        		<col style="width:20%;">
-							        		<col style="width:20%;">
-							        		<col style="width:20%;">
-							        		<col style="width:20%;">
+							        		<col style="width:35%;">
+							        		<col style="width:25%;">
 							        		<col style="width:20%;">
 							        	</colgroup>
 							            <thead>
 							                <tr class="thead">
 							                    <th>순서</th>
 							                    <th>공지사항 제목</th>
-							                    <th>내용</th>
 							                    <th>발행일시</th>
 							                    <th>삭제</th>
 							                    
@@ -55,7 +53,7 @@
 								                <tr>
 							                    	<td>${size - status.index}</td>
 							                    	<td class="opt-tl"><a href="javascript:void(0);" onclick="board_mod('${resultList.idx}');" class="link">${resultList.title}</a></td>
-							                    	<td>${resultList.text}</td>
+							               
 							                    	<td>${resultList.reg_date}</td>
 							                    	<td>
 							                    		<button type="button" onclick="javascript:board_delete('${resultList.idx}')" class="btn-basic btn-fill btn-sm">삭제</button>

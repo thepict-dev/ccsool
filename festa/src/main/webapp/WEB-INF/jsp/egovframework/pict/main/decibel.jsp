@@ -19,7 +19,8 @@
 	<link href="../../../../../css/egovframework/pict/ani.css" rel="stylesheet">
 	<link href="../../../../../css/egovframework/pict/swiper-bundle.min.css" rel="stylesheet" />
 	<link rel="shortcut icon" type="image/x-icon" href="/img/pabi.png">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<meta property="og:title" content="2024 춘천 술페스타">
 	<meta property="og:description" content="2024 춘천 술페스타">
 	<meta property="og:image" content="/img/main/poster.png">
@@ -49,6 +50,71 @@
         </div>
     </div>
     <script> 
+		let intervalId;
+		document.addEventListener('keydown', function(event) {
+	        if (event.code === 'Space' || event.key === ' ') {
+	            // Space key was pressed
+	            if (intervalId) {
+	                clearInterval(intervalId); // Stop the interval
+	                
+	                
+	                $('.bottleContainer').css("background-position-y", "19%")
+					$('.aniWrapper').css("background-position-y", "19%")
+	            }
+	        }
+	    });
+	    async function startAudio() {
+	        try {
+	            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+	            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+	            const analyser = audioContext.createAnalyser();
+	            const source = audioContext.createMediaStreamSource(stream);
+	            source.connect(analyser);
+	
+	            analyser.fftSize = 2048;
+	            const bufferLength = analyser.frequencyBinCount;
+	            const dataArray = new Uint8Array(bufferLength);
+	
+	            function getDecibels() {
+	                analyser.getByteTimeDomainData(dataArray);
+
+	                const sumSquares = dataArray.reduce((sum, value) => {
+	                    const normalizedValue = (value - 128) / 128; // Normalize value between -1 and 1
+	                    return sum + normalizedValue * normalizedValue;
+	                }, 0);
+	                const rms = Math.sqrt(sumSquares / dataArray.length);
+	                const decibels = rms > 0 ? 20 * Math.log(rms) / Math.log(10) : -100;
+
+	                const minDecibels = -80; // Minimum expected decibels
+	                const maxDecibels = 0; // Maximum expected decibels
+
+	                // Normalize decibels to a range between 100 and 24
+	                const minNormalizedValue = 20;
+	                const maxNormalizedValue = 100;
+	                const normalizedDecibels = Math.max(
+	                    minNormalizedValue,
+	                    Math.min(
+	                        maxNormalizedValue,
+	                        maxNormalizedValue - ((decibels - minDecibels) / (maxDecibels - minDecibels)) * (maxNormalizedValue - minNormalizedValue)
+	                    )
+	                );
+
+	                console.log(normalizedDecibels);
+	                
+	                $('.bottleContainer').css("background-position-y", normalizedDecibels + "%");
+	                $('.aniWrapper').css("background-position-y", normalizedDecibels + "%");
+	            }
+	
+	            intervalId = setInterval(getDecibels, 100);
+	        } catch (err) {
+	            console.error('Error accessing microphone:', err);
+	        }
+	    }
+		
+	    setTimeout( function() {
+	    	startAudio();	
+	    }, 3000);
+	    
         var lottieAni = bodymovin.loadAnimation({
             container: document.querySelector('.lottieContainer'), // 필수, 애니메이션 들어가는 곳 
             path: 'https://lottie.host/b7f8fd47-6fac-4e88-bec8-ece8a134dbed/oCMUcGHjCO.json', // 필수(url 또는 json파일 다운로드 경로)
@@ -94,13 +160,13 @@
                 lottieContainer.classList.add('nonBr');
             }
 
-            if (positionPercentage <= 24 && !videoPlayed) {
+            if (positionPercentage < 20 && !videoPlayed) {
                 videoWrap.classList.add('active');
                 playVideoWithSound();
                 videoPlayed = true;
             }
             
-            if (positionPercentage > 24) {
+            if (positionPercentage > 20) {
                 requestAnimationFrame(checkBottlePosition);
             }
         }
