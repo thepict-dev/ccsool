@@ -79,19 +79,19 @@
 	
 	            function getDecibels() {
 	                analyser.getByteTimeDomainData(dataArray);
-
+	                const amplificationFactor = 2.0;
 	                const sumSquares = dataArray.reduce((sum, value) => {
-	                    const normalizedValue = (value - 128) / 128; // Normalize value between -1 and 1
+	                    const normalizedValue = (value - 128) / 128 * amplificationFactor; // Normalize value between -1 and 1
 	                    return sum + normalizedValue * normalizedValue;
 	                }, 0);
 	                const rms = Math.sqrt(sumSquares / dataArray.length);
-	                const decibels = rms > 0 ? 49 * Math.log(rms) / Math.log(10) : -100;
+	                const decibels = rms > 0 ? 50 * Math.log(rms) / Math.log(10) : -100;
 
-	                const minDecibels = -51; // Minimum expected decibels
+	                const minDecibels = -60; // Minimum expected decibels
 	                const maxDecibels = 0; // Maximum expected decibels
 
 	                // Normalize decibels to a range between 100 and 24
-	                const minNormalizedValue = 49;
+	                const minNormalizedValue = 50;
 	                const maxNormalizedValue = 100;
 	                const normalizedDecibels = Math.max(
 	                    minNormalizedValue,
@@ -162,7 +162,7 @@
                 lottieContainer.classList.add('nonBr');
             }
 
-            if (positionPercentage < 49 && !videoPlayed) {
+            if (positionPercentage <= 49 && !videoPlayed) {
                 videoWrap.classList.add('active');
                 playVideoWithSound();
                 videoPlayed = true;
