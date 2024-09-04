@@ -38,14 +38,16 @@
 	</script>
 </head>
 <body>
-    <div class="aniWrapper">
-        <div class="bottleContainer"></div>
-        <div class="lottieContainer"></div>
-        <div class="particle1"></div>
-        <div class="particle2"></div>
-        <div class="videoWrap">
-            <div class="videoContainer">
-                <video src="/img/main/open-video.mp4" muted></video>
+    <div class="wrapper">
+        <div class="aniWrapper">
+            <div class="bottleContainer"></div>
+            <div class="lottieContainer"></div>
+            <div class="particle1"></div>
+            <div class="particle2"></div>
+            <div class="videoWrap">
+                <div class="videoContainer">
+                    <video src="/img/main/open-video.mp4" muted></video>
+                </div>
             </div>
         </div>
     </div>
@@ -58,8 +60,8 @@
 	                clearInterval(intervalId); // Stop the interval
 	                
 	                
-	                $('.bottleContainer').css("background-position-y", "19%")
-					$('.aniWrapper').css("background-position-y", "19%")
+	                $('.bottleContainer').css("background-position-y", "49%")
+					$('.aniWrapper').css("background-position-y", "49%")
 	            }
 	        }
 	    });
@@ -83,13 +85,13 @@
 	                    return sum + normalizedValue * normalizedValue;
 	                }, 0);
 	                const rms = Math.sqrt(sumSquares / dataArray.length);
-	                const decibels = rms > 0 ? 20 * Math.log(rms) / Math.log(10) : -100;
+	                const decibels = rms > 0 ? 49 * Math.log(rms) / Math.log(10) : -100;
 
-	                const minDecibels = -80; // Minimum expected decibels
+	                const minDecibels = -51; // Minimum expected decibels
 	                const maxDecibels = 0; // Maximum expected decibels
 
 	                // Normalize decibels to a range between 100 and 24
-	                const minNormalizedValue = 20;
+	                const minNormalizedValue = 49;
 	                const maxNormalizedValue = 100;
 	                const normalizedDecibels = Math.max(
 	                    minNormalizedValue,
@@ -149,7 +151,7 @@
             
             const positionPercentage = parseFloat(backgroundPositionY);
             
-            if (positionPercentage <= 50 && !lottieAni2.isLoaded) {
+            if (positionPercentage <= 80 && !lottieAni2.isLoaded) {
                 lottieAni2.play();
                 lottieAni3.play();
             }
@@ -160,13 +162,13 @@
                 lottieContainer.classList.add('nonBr');
             }
 
-            if (positionPercentage < 20 && !videoPlayed) {
+            if (positionPercentage < 49 && !videoPlayed) {
                 videoWrap.classList.add('active');
                 playVideoWithSound();
                 videoPlayed = true;
             }
             
-            if (positionPercentage > 20) {
+            if (positionPercentage > 49) {
                 requestAnimationFrame(checkBottlePosition);
             }
         }
