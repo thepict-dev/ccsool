@@ -369,7 +369,7 @@
 				</p>
 			</div>
 			<address>
-				<span class="name-tag">주소 :</span> 강원도 춘천시 시청길 40-1 픽트스퀘어
+				<span class="name-tag">주소 :</span> 강원특별자치도 춘천시 효자로 144 픽트스퀘어
 			</address>
 			<p>
 				<span class="name-tag">전화 :</span> 033-244-7758</p>
